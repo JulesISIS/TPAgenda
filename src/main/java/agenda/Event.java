@@ -4,21 +4,9 @@ import java.time.*;
 
 public class Event {
 
-    /**
-     * The myTitle of this event
-     */
     private String myTitle;
-    
-    /**
-     * The starting time of the event
-     */
     private LocalDateTime myStart;
-
-    /**
-     * The durarion of the event 
-     */
     private Duration myDuration;
-
 
     /**
      * Constructs an event
@@ -40,32 +28,19 @@ public class Event {
      * @return true if the event occurs on that day, false otherwise
      */
     public boolean isInDay(LocalDate aDay) {
-        // TODO : implémenter cette méthode
-        throw new UnsupportedOperationException("Pas encore implémenté");
+        return this.getStart().equals(aDay.atStartOfDay());
     }
-   
-    /**
-     * @return the myTitle
-     */
+
     public String getTitle() {
         return myTitle;
     }
 
-    /**
-     * @return the myStart
-     */
     public LocalDateTime getStart() {
         return myStart;
     }
 
-
-    /**
-     * @return the myDuration
-     */
     public Duration getDuration() {
         return myDuration;
     }
 
-   
-    
 }
